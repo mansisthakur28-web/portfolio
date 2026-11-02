@@ -23,6 +23,7 @@ export interface PracticeProject {
   skills: string[];
   primaryImage?: string;
   supportingImages?: { url: string; caption: string }[];
+  videoUrl?: string;
   highlight: string;
 }
 
@@ -210,25 +211,10 @@ export const WIDER_PRACTICE_PROJECTS: PracticeProject[] = [
     category: "Short-Form Video & Editing",
     title: "Rhythmic Video Editing & Social Motion",
     subtitle: "Pacing, transitions, on-screen type, and visual rhythm",
-    description: "I edit short-form clips in CapCut and Filmora, paying attention to pacing, simple transitions, and on-screen type that supports the story. This part of my practice is still growing, and finished pieces will sit here as they are ready.",
+    description: "I edit short-form clips in CapCut and Filmora, paying attention to pacing, simple transitions, and on-screen type that supports the story.",
     skills: ["Pacing", "Simple Transitions", "On-screen Type", "Visual Storytelling"],
+    videoUrl: "/videos/capcut-shortform-edit.mp4",
     highlight: "Learning how motion and rhythm can carry a visual idea beyond a still poster."
-  },
-  {
-    id: "website-menu-concepts",
-    letter: "D",
-    category: "Website & Menu Visual Concepts",
-    title: "Tactile Menu Design & Brand Artifacts",
-    subtitle: "Print menu layouts, packaging explorations, and local atmospheric photography",
-    description: "Exploring tactile dining collateral, brand packaging (Seoul Sip coffee packaging concept), and location-grounded visual moodboards. Balancing functional menu readability with rich sensory design details.",
-    skills: ["Editorial Menu Layout", "Brand Packaging Concept", "Print Hierarchy", "Atmospheric Photography"],
-    primaryImage: "/images/projects/visual-design/menu_design_feature.png",
-    supportingImages: [
-      { url: "/images/projects/visual-design/seoul_sip_packaging.jpg", caption: "Seoul Sip artisanal coffee packaging concept" },
-      { url: "/images/projects/visual-design/bhopal_lake.jpg", caption: "Atmospheric evening study at Upper Lake, Bhopal" },
-      { url: "/images/projects/visual-design/night_lights.jpg", caption: "Nocturnal light study & color grading exploration" }
-    ],
-    highlight: "Bridging digital identity with tangible print materials, packaging mockups, and sensory imagery."
   }
 ];
 

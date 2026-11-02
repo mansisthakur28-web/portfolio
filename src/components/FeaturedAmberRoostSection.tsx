@@ -261,6 +261,29 @@ export default function FeaturedAmberRoostSection() {
               })}
             </div>
           </div>
+
+          {/* Animated Figma Project Spread */}
+          <div className="mt-8 bg-paper rounded-xl editorial-border editorial-shadow overflow-hidden">
+            <div className="p-4 bg-cream/70 border-b border-navy/20 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="px-2 py-0.5 rounded bg-butter font-mono text-[10px] font-bold text-navy border border-navy/30">
+                  FIGMA ANIMATION // MOTION SPREAD
+                </span>
+                <span className="font-sans text-xs font-bold text-navy uppercase tracking-wider">
+                  Campaign Poster Trilogy Animated Presentation
+                </span>
+              </div>
+            </div>
+            <div className="relative bg-[#1C1713] flex items-center justify-center p-3 sm:p-5">
+              <video
+                src="/videos/figma-poster-animation.mp4"
+                controls
+                playsInline
+                preload="metadata"
+                className="w-full max-h-[520px] rounded object-contain shadow-md"
+              />
+            </div>
+          </div>
         </div>
 
         {/* ============================================================== */}

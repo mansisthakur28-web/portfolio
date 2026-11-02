@@ -41,7 +41,9 @@ export default function CreativePracticeSection() {
             return (
               <div
                 key={project.id}
-                className="bg-paper rounded-xl editorial-border editorial-shadow p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:-translate-y-0.5 transition-transform"
+                className={`bg-paper rounded-xl editorial-border editorial-shadow p-6 sm:p-8 flex flex-col justify-between space-y-6 hover:-translate-y-0.5 transition-transform ${
+                  project.videoUrl ? 'md:col-span-2' : ''
+                }`}
               >
                 <div className="space-y-4">
                   {/* Category Header */}
@@ -74,19 +76,31 @@ export default function CreativePracticeSection() {
                     {project.description}
                   </p>
 
-                  {/* Visual assets container (for Category D: Website & Menu Visual Concepts) */}
+                  {/* Embedded HTML5 Video for Short-Form Video & Editing */}
+                  {project.videoUrl && (
+                    <div className="pt-2">
+                      <div className="relative bg-[#1C1713] rounded-xl overflow-hidden editorial-border flex items-center justify-center p-2 sm:p-4 shadow-inner">
+                        <video
+                          src={project.videoUrl}
+                          controls
+                          playsInline
+                          preload="metadata"
+                          className="w-full max-h-[520px] rounded object-contain shadow-md"
+                        />
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Visual assets container */}
                   {hasImages && (
                     <div className="space-y-3 pt-2">
                       {project.primaryImage && (
                         <div className="rounded-lg overflow-hidden editorial-border bg-navy/10 relative group">
                           <img
                             src={project.primaryImage}
-                            alt="Editorial Menu Design"
+                            alt={project.title}
                             className="w-full max-h-[260px] object-cover group-hover:scale-105 transition-transform duration-500"
                           />
-                          <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-paper/90 rounded border border-navy/20 text-[10px] font-mono text-navy font-semibold">
-                            Tactile Print Menu Layout Exploration
-                          </div>
                         </div>
                       )}
 
